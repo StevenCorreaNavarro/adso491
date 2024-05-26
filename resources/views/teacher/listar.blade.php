@@ -18,14 +18,18 @@
             <center>
                 <h1 style="font-size:80px">Lista profesores</h1>
                 <br>
-                <a href="{{ route('teacher.create') }}" class="btn btn-primary " style="backgrand-color:red;">Registrar Profesor</a>
-                <a href="{{ route('student.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar alumno</a>
-                <a href="{{ route('student.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver alumnos</a>
-                <a href="{{ route('teacher.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver Profesores</a>
+                <a href="{{ route('teacher.create') }}" class="btn btn-primary " style="backgrand-color:red;">Registrar
+                    Profesor</a>
+                <a href="{{ route('student.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar
+                    alumno</a>
+                <a href="{{ route('student.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver
+                    alumnos</a>
+                <a href="{{ route('teacher.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver
+                    Profesores</a>
                 <a href="{{ route('module.listar') }}" class="btn btn-dark " style="backgrand-color:red;">Ver Modulo</a>
             </center>
             <br>
-            <table class="table" >
+            <table class="table">
                 <td>
                     <h4>Id
                 </td>
@@ -52,16 +56,19 @@
                         <td>{{ $dato->nombre_profesor }}</td>
                         <td>{{ $dato->direccion }}</td>
                         <td>{{ $dato->telefono }} </td>
-                        
-                        <td><a class="btn btn-primary" href="{{ route('teacher.show', $dato->id) }}" style="text-decoration: none">Mostrar</a>
+
+                        <td><a class="btn btn-primary" href="{{ route('teacher.show', $dato->id) }}"
+                                style="text-decoration: none">Mostrar</a>
                         </td>
-                        <td><a class="btn btn-primary" href="{{ route('teacher.edit', $dato->id) }}" style="text-decoration: none">Editar</a>
+                        <td><a class="btn btn-primary" href="{{ route('teacher.edit', $dato->id) }}"
+                                style="text-decoration: none">Editar</a>
                         </td>
                         <td>
                             <form action="{{ route('teacher.destroy', $dato->id) }}" method="POST">
                                 @csrf
                                 @method('delete')
-                                <button type="submit" class="btn btn-primary">Eliminar</button>
+                                <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">Eliminar</button>
                             </form>
                         </td>
                     </tr>
@@ -71,6 +78,11 @@
             <br>
         </div>
     </div>
+    <!-- Button trigger modal -->
+    {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button> --}}
+
 
 
 
