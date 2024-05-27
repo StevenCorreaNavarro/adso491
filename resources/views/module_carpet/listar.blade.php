@@ -32,7 +32,7 @@
                 <br>
                 <br>
                 <br>
-                <table class="table">
+                <table class="table box-3">
                     <td>
                         <h4>Id
                     </td>
@@ -55,13 +55,12 @@
                         {{-- function listar --}}
                         <tr>
                             
-                            <td>{{ $dato->id }}</td>
+                            <td class="box-3">{{ $dato->id }}</td>
                             <td>{{ $dato->codigo }}</td>
                             <td>{{ $dato->nombre_modulo }}</td>
-                            <td>{{ $dato->id_profesor }}</td>
+                            <td>{{ $dato->id_profesor}}</td>
+                            {{-- <td>{{$dato->nombre_profesor}}</td> --}}
                             <td>{{ $dato->id_student }}</td>
-                            
-
                             <td><a class="btn btn-primary" href="{{ route('module.show', $dato->id) }}" style="text-decoration: none">Mostrar</a></td>
                             <td><a class="btn btn-primary" href="{{ route('module.edit', $dato->id) }}" style="text-decoration: none">Editar</a></td>
                             <td>

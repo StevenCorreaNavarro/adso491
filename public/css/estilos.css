@@ -1,10 +1,9 @@
+
 body {
     padding-top: 5%;
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 5%;
-
-   
     /* height: 100vh; */
     width: 100%;
     background: #e6e6e6;
@@ -15,13 +14,12 @@ body {
 }
 
 .box {
-    
-    
     border-radius: 25px;
     width: 100%;
     box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.765),
         15px 15px 15px rgba(94, 104, 121, 0.3);
 }
+
 .box-2{
     border-radius: 20px;
     width: 30%;
@@ -29,9 +27,64 @@ body {
         15px 15px 15px rgba(94, 104, 121, 0.3);
 }
 
-.container{
+/* 
+.box-3{
     
+    border-radius: 10px;
+    box-shadow: 15px 15px 15px rgba(255, 255, 255, 0.765),
+        -15px -15px 15px rgba(94, 104, 121, 0.3);
+} */
+
+.container{
     padding-left: 40px;
     padding-right: 40px;
-    
+}
+
+.home::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+}
+
+.home.show::before{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.form_container{
+    position: fixed;
+    max-width: 65%;        
+    max-height: 65%;                                /**/
+    /* width: 100%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 101;
+    background: #fff;
+    margin: 0%;
+    padding: 0;                                            /**/
+    border-radius: 10px;                                      /**/
+    box-shadow:rgba(0, 0, 0, 0.1); 
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-out;
+    box-shadow: 0px 0px 20px 1000px rgba(0, 0, 0, 0.833) ;      /* fondo se oscurece*/
+}
+
+.login_form{
+    padding: 32px;                                       /**/
+    width: 1266px;                                     /*tamaño de la caja en hancho*/
+    height: 420px;
+}
+
+.home.show .form_container{                           
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%)scale(1);
 }

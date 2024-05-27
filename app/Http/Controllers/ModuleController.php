@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Teacher;
 use App\Models\Module;
 use Illuminate\Http\Request;
 
@@ -17,6 +17,7 @@ class ModuleController extends Controller
     }
     public function create()
     { // crear formulario
+        // $teacher=Teacher::pluck('id');
         return view('module_carpet.create');
     }
     public function store(Request $request)
@@ -26,6 +27,7 @@ class ModuleController extends Controller
         $dato->codigo = $request->codigo;
         $dato->nombre_modulo = $request->nombre_modulo;
         $dato->id_profesor = $request->id_profesor;
+        // $dato->nombre_profesor = $request->nombre_profesor;
         $dato->id_student = $request->id_student;
         $dato->save();
         // return $dato;

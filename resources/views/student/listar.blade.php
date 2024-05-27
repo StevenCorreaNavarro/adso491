@@ -12,17 +12,21 @@
     <title>Title</title>
 </head>
 
-<body  {{--   style="padding: 10% ; "--}}   > 
-    
+<body {{--   style="padding: 10% ; " --}}>
+
     <div class="box">
         <div class="container">
             <center>
                 <h1 style="font-size:80px">Lista alumnos</h1>
                 <br>
-                <a href="{{ route('student.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar alumno</a>
-                <a href="{{ route('teacher.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar profesor</a>
-                <a href="{{ route('student.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver alumnos</a>
-                <a href="{{ route('teacher.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver Profesores</a>
+                <a href="{{ route('student.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar
+                    alumno</a>
+                <a href="{{ route('teacher.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar
+                    profesor</a>
+                <a href="{{ route('student.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver
+                    alumnos</a>
+                <a href="{{ route('teacher.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver
+                    Profesores</a>
                 <a href="{{ route('module.listar') }}" class="btn btn-dark " style="backgrand-color:red;">Ver Modulo</a>
                 <br>
                 <br>
@@ -40,7 +44,7 @@
                         <h4>Apellido
                     </td>
                     <td>
-                        
+
                     </td>
                     <td></td>
                     <td></td>
@@ -53,14 +57,21 @@
                             <td>{{ $dato->apellido }}</td>
 
                             {{-- pendiete arreglar  --}}
-                            <td><a class="btn btn-primary" href="{{ route('student.show', $dato->id) }}" style="text-decoration: none">Mostrar</a></td>
-                            <td><a class="btn btn-primary" href="{{ route('student.edit', $dato->id) }}" style="text-decoration: none">Editar</a></td>
+                            <td><a class="btn btn-primary" href="{{ route('student.show', $dato->id) }}"
+                                    style="text-decoration: none">Mostrar</a></td>
+                            <td><a class="btn btn-primary" href="{{ route('student.edit', $dato->id) }}"
+                                    style="text-decoration: none">Editar</a></td>
                             <td>
                                 <form action="{{ route('student.destroy', $dato->id) }}" method="POST">
                                     @csrf
                                     @method('delete')
+
+                                    
                                     <button type="submit" class="btn btn-primary">Eliminar</button>
+
                                 </form>
+                            </td>
+                            <td>
                             </td>
                         </tr>
                     @endforeach
@@ -69,12 +80,16 @@
         </div>
     </div>
 
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 
 </body>
 
 </html>
-
-
-

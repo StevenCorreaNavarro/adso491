@@ -33,6 +33,7 @@
                     <br>
                     <label  class="form-label">
                         Id profesor
+                        
                         <br>
                         <input class="form-control"  type="text" name="id_profesor" required>
                     </label>

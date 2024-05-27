@@ -49,9 +49,6 @@
                     <button class="btn btn-primary" type="submit">Enviar Formulario:</button>
 
 
-
-                    <!-- Modal -->
-
                 </form>
             </center>
             <br><br><br>

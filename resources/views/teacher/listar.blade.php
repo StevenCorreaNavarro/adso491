@@ -56,7 +56,6 @@
                         <td>{{ $dato->nombre_profesor }}</td>
                         <td>{{ $dato->direccion }}</td>
                         <td>{{ $dato->telefono }} </td>
-
                         <td><a class="btn btn-primary" href="{{ route('teacher.show', $dato->id) }}"
                                 style="text-decoration: none">Mostrar</a>
                         </td>
@@ -67,10 +66,16 @@
                             <form action="{{ route('teacher.destroy', $dato->id) }}" method="POST">
                                 @csrf
                                 @method('delete')
-                                <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">Eliminar</button>
+                                {{-- <button type="submit" class="btn btn-primary">Eliminar</button> --}}
+                                <button type="submit" class="btn btn-primary">
+                                    aliminar
+                                </button>
+                                
                             </form>
+
+
                         </td>
+                       
                     </tr>
                 @endforeach
             </table>
@@ -78,15 +83,34 @@
             <br>
         </div>
     </div>
+
     <!-- Button trigger modal -->
-    {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-    </button> --}}
+
+    <!-- Modal -->
+    {{-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div> --}}
 
 
 
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 
