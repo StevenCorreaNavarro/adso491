@@ -56,7 +56,13 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Models\Profile');
     }
-    
+
+    //Relacion Muchos a Muchos
+
+      //Relacion muchos a muchos
+     public function roles(){
+        return $this->belongsToMany('App\Models\Role');
+    }
 }
 
 
@@ -131,16 +137,3 @@ class User extends Authenticatable
 // = null
 
 // >                                                                                                                                                                                                                      
-
-
-
-
-
-
-
-
-
-
-
-
-
