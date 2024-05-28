@@ -27,13 +27,21 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// Route::get('/', function () {           //primera vista de modulos
+//     $modules = Module::orderBy('id', 'desc')->get();
+//     return view('module_carpet.listar',compact('modules'));
+// });
+
 Route::get('/', function () {           //primera vista de modulos
-    $modules = Module::orderBy('id', 'desc')->get();
-    return view('module_carpet.listar',compact('modules'));
-});
+        // $modules = Module::orderBy('id', 'desc')->get();
+        return view('bienvenido');
+    });
+    
 
 // use App\Model\User
 // $user = User::find(2)  
+Route::get('usuario/asociar_rol',[RoleUserController::class,'asociar']);
+Route::post('usuario/asociar_rol/store',[RoleUserController::class,'store'])->name('role_user.store');
 
 //modulo
 Route::get('module/listar',[ModuleController::class,'listar'])->name('module.listar');
