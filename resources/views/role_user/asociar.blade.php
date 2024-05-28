@@ -13,16 +13,13 @@
 </head>
 
 <body>
-    <div class="box ">
+    <div class="box-2">
         <div class="px-20 mx-100">
             <center>
-                <h1>hola desde asociar:</h1>
-
+                <br>
+                <h1 style="font-size:40px">Asociar:</h1>
                 <form action="{{ route('role_user.store') }}" method="POST" enctype="multipart/form-data">
-
                     @csrf
-
-
                     <br>
                     <h1>Usuarios:</h1>
                     <select name="user_id">
@@ -31,21 +28,20 @@
                         @endforeach
                     </select>
                     <br>
+                    <br><br>
                     <h1>Roles:</h1>
                     <select name="role_id">
                         @foreach ($roles as $rol)
-                            <option value="{{ $rol->id }}">{{ $rol->id }} - {{ $rol->name }}</option>
+                            <option class="px-20 mx-100" value="{{ $rol->id }}">{{ $rol->id }} -
+                                {{ $rol->name }}</option>
                         @endforeach
                     </select>
-
-
                     <br> <br>
-                    <button type="submit">Enviar Formulario:</button>
+                    <button type="submit" class="btn btn-primary ">Enviar Formulario:</button>
                 </form>
+                <br><br><br>
             </center>
         </div>
-
-
     </div>
 
 
