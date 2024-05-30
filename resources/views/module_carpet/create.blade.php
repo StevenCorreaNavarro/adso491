@@ -31,17 +31,20 @@
                         <input class="form-control"  type="text" name="nombre_modulo" required>
                     </label>
                     <br>
-                    <label  class="form-label">
-                        Id profesor
-                        
-                        <br>
-                        <input class="form-control"  type="text" name="id_profesor" required>
-                    </label>
-                    <label  class="form-label">
-                        Id alumno
-                        <br>
-                        <input class="form-control"  type="text" name="id_student" required>
-                    </label>
+                    <h1>Profesor:</h1>
+                    <select name="id_profesor">
+                        @foreach ($teacher as $user)
+                            <option value="{{ $user->id }}">{{ $user->id }} - {{ $user->id_profesor }}</option>
+                        @endforeach
+                    </select>
+                    <br>
+                    <br><br>
+                    <h1>alumno</h1>
+                    <select name="id_student">
+                        @foreach ($student as $rol)
+                            <option value="{{ $rol->id }}">{{ $rol->id }} - {{ $rol->id_profesor }}</option>
+                        @endforeach
+                    </select>
                     <br>
                     <br>
                     <button class="btn btn-primary" type="submit" >Enviar Formulario:</button>

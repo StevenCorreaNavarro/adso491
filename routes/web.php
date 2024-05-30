@@ -46,6 +46,7 @@ Route::post('usuario/asociar_rol/store',[RoleUserController::class,'store'])->na
 
 //modulo
 Route::get('module/listar',[ModuleController::class,'listar'])->name('module.listar');
+Route::get('module/asociar',[ModuleController::class,'asociar'])->name('module.asociar');
 Route::get('module/create',[ModuleController::class,'create'])->name('module.create');
 Route::post('module/store',[ModuleController::class,'store'])->name('module.store');
 Route::get('module/{dato}',[ModuleController::class,'show'])->name('module.show');

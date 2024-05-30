@@ -21,7 +21,7 @@
                     <a href="{{ route('module.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver Modulo</a>
                     <br>
                     <br>
-                    <a href="{{ route('role_user.asociar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver Roles</a>
+                    {{-- <a href="{{ route('role_user.asociar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver Roles</a> --}}
                     
             </center>
         </div>
