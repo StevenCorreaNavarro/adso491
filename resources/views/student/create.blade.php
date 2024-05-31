@@ -19,11 +19,7 @@
                 <br>
                 <form action="{{ route('student.store') }}" method="POST" enctype="multipart/form-data" >
                     @csrf {{-- token o seguridad  --}}
-                    <label  class="form-label">
-                        Expediente
-                        <br>
-                        <input class="form-control" type="text" name="expediente"  class="form-control" required>
-                    </label>
+                    
                     <br>
                     <label  class="form-label">
                         Nombre
@@ -35,6 +31,11 @@
                         apellido
                         <br>
                         <input class="form-control"  type="text" name="apellido" required>
+                    </label>
+                    <label  class="form-label">
+                        Expediente
+                        <br>
+                        <input class="form-control" type="text" name="expediente"  class="form-control" required>
                     </label>
                     
                     

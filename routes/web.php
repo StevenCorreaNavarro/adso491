@@ -36,8 +36,6 @@ Route::get('/', function () {           //primera vista de modulos
         // $modules = Module::orderBy('id', 'desc')->get();
         return view('bienvenido');
     });
-    
-
 // use App\Model\User
 // $user = User::find(2)  
 
