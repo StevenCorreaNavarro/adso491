@@ -39,9 +39,13 @@ Route::get('/', function () {           //primera vista de modulos
 // use App\Model\User
 // $user = User::find(2)  
 
-Route::get('usuario/asociar_rol',[RoleUserController::class,'asociar'])->name('role_user.asociar');
-Route::post('usuario/asociar_rol/store',[RoleUserController::class,'store'])->name('role_user.store');;
+// Route::get('usuario/asociar_rol',[RoleUserController::class,'asociar'])->name('role_user.asociar');
+// Route::post('usuario/asociar_rol/store',[RoleUserController::class,'store'])->name('role_user.store');
+// Route::get('usuario/asociar_rol',[RoleUserController::class,'asociar'])->name('role_user.asociar');
 
+
+Route::get('usuario/asociar/rol',[RoleUserController::class,'asociar']);
+Route::post('usuario/asociar/rol/store',[RoleUserController::class,'store'])->name('role_user.store');
 //modulo
 Route::get('module/listar',[ModuleController::class,'listar'])->name('module.listar');
 Route::get('module/asociar',[ModuleController::class,'asociar'])->name('module.asociar');

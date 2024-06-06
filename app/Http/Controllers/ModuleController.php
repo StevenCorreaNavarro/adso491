@@ -11,20 +11,12 @@ class ModuleController extends Controller
     public function listar()
     {
         // $user = User::find(1);
-
         // return $user->profile;                          $students  se escribe igual compact('students'));
         $modules = Module::orderBy('id', 'desc')->get();   // la intermedia
         return view('module_carpet.listar', compact('modules'));
-        
     }
-
-
-
-
-
     // public function asociar()
     // {
-
     //     $users = Teacher::all();
     //     $roles = Module::all();
     //     return view('module_carpet.create', compact('users', 'roles'));
@@ -41,9 +33,7 @@ class ModuleController extends Controller
 
     
     public function store(Request $request)
-
-
-    //aplicar a asociaf
+    //aplicar a asociar
     {
         $dato = new Module();
 
