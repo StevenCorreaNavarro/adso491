@@ -18,10 +18,10 @@
             <center>
                 <br>
                 <h1> Asociar </h1>
-                <h1>Cliente-Producto:</h1>
+                <h1>Camionero-Camion:</h1>
                 <br>
                 <br>
-                <form action="{{ route('role_user.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('trucker_truck.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <br>
                     <h3>Camionero :</h3>
