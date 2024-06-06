@@ -11,20 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('customerproducts', function (Blueprint $table) {
+        Schema::create('trucker_truck', function (Blueprint $table) {
             $table->id();
 
             //creacion de tablas foraneas
-            $table->unsignedBigInteger('customer_id')->nullable();
-            $table->unsignedBigInteger('product_id')->nullable();
+            $table->unsignedBigInteger('trucker_id')->nullable();
+            $table->unsignedBigInteger('truck_id')->nullable();
 
-            $table->foreign('customer_id')
+            $table->foreign('trucker_id')
             ->references('id')
-            ->on('customers')->onDelete('cascade');
+            ->on('truckers')->onDelete('cascade');
 
-            $table->foreign('product_id')
+            $table->foreign('truck_id')
             ->references('id')
-            ->on('products')->onDelete('cascade');
+            ->on('trucks')->onDelete('cascade');
 
             $table->timestamps();
         });
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('customerproducts');
+        Schema::dropIfExists('trucker_truck');
     }
 };

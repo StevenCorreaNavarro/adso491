@@ -24,19 +24,19 @@
                 <form action="{{ route('role_user.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <br>
-                    <h3>Cliente:</h3>
+                    <h3>Camionero :</h3>
                     <select class="container-sm col-6" name="user_id">
-                        @foreach ($customers as $cust)
+                        @foreach ($truckers as $cust)
                             <option  value="{{ $cust->id }}">{{ $cust->id }} - {{ $cust-> nombre }}</option>
                         @endforeach
                     </select>
                     <br>
                     <br>
                     <br>
-                    <h3>Producto:</h3>
+                    <h3>camion:</h3>
                     <select class="container-sm col-6" name="role_id">
-                        @foreach ($products as $prod)
-                            <option  value="{{ $prod->id }}">{{ $prod->id }} - {{ $prod->existencia }}</option>
+                        @foreach ($trucks as $prod)
+                            <option  value="{{ $prod->id }}">{{ $prod->id }} - {{ $prod->matricula }}</option>
                         @endforeach
                     </select>
                     <br> <br>

@@ -40,6 +40,8 @@ Route::get('/', function () {           //primera vista de modulos
     return view('bienvenido');
 });
 
+Route::get('camionero/asociar/camion', [TruckerTruckController::class, 'asociar']);
+Route::post('camionero/store', [TruckerTruckController::class, 'store'])->name('trucker_truck.store');
 
 Route::get('cliente/asociar/producto', [CustomerproductController::class, 'asociar']);
 Route::post('cliente/store', [CustomerproductController::class, 'store'])->name('customer_product.store');
