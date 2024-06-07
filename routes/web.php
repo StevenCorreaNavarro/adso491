@@ -38,7 +38,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {         
     // $modules = Module::orderBy('id', 'desc')->get();
     return view('bienvenido');
-})->name('bienvenidos');
+})->name('bienvenidos');  //ruta home
 
                                  //package-paquete
 Route::get('paquete/listar', [PackageController::class, 'listar'])->name('package.listar');
@@ -61,11 +61,16 @@ Route::get('camionero/camion/listar', [TruckerTruckController::class, 'listar'])
 Route::get('camionero/asociar/camion', [TruckerTruckController::class, 'asociar'])->name('trucker_truck.asociar');
 Route::post('camionero/store', [TruckerTruckController::class, 'store'])->name('trucker_truck.store');
 //producto
+
 Route::get('cliente/asociar/producto', [CustomerproductController::class, 'asociar']);
 Route::post('cliente/store', [CustomerproductController::class, 'store'])->name('customer_product.store');
-//role user
-Route::get('usuario/asociar/rol', [RoleUserController::class, 'asociar']);
+
+//role user   completo
+Route::get('usuario/listar/rol', [RoleUserController::class, 'listar'])->name('role_user.listar');
+Route::get('usuario/asociar/rol', [RoleUserController::class, 'asociar'])->name('role_user.asociar');
+Route::get('usuario/create/rol', [RoleUserController::class, 'create'])->name('role_user.create');
 Route::post('usuario/asociar/rol/store', [RoleUserController::class, 'store'])->name('role_user.store');
+
 //modulo
 Route::get('module/listar', [ModuleController::class, 'listar'])->name('module.listar');
 Route::get('module/asociar', [ModuleController::class, 'asociar'])->name('module.asociar');

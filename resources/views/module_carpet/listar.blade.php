@@ -57,7 +57,6 @@
                     @foreach ($modules as $dato)
                         {{-- function listar --}}
                         <tr>
-                            
                             <td class="box-3">{{ $dato->id }}</td>
                             <td>{{ $dato->codigo }}</td>
                             <td>{{ $dato->nombre_modulo }}</td>

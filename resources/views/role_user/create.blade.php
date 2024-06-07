@@ -17,11 +17,11 @@
         <div class="container">
             <br>
             <center>
-                <h1>Asignar Modulo</h1>
+                <h1>Asigna roles</h1>
                 <br>
-                <form action="{{ route('module.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('role_user.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf {{-- token o seguridad  --}}
-                    <label class="form-label">
+                    {{-- <label class="form-label">
                         Codigo
                         <br>
                         <input class="form-control" type="text" name="codigo" class="form-control" required>
@@ -31,25 +31,24 @@
                         Nombre Modulo
                         <br>
                         <input class="form-control" type="text" name="nombre_modulo" required>
-                    </label>
+                    </label> --}}
                     <br>
                     <div >
-                        <h1>Profesor:</h1>
+                        <h1>roles:</h1>
                         <select name="id_profesor">
-                            @foreach ($teacher as $user)
-                                <option class="px-20 mx-100" value="{{ $user->id }}">{{ $user->id }} - {{ $user->nombre_profesor }}
+                            @foreach ($roles as $user)
+                                <option class="px-20 mx-100" value="{{ $user->id }}">{{ $user->id }} - {{ $user->role_id}}
                                 </option>
                             @endforeach
                         </select>
-
                     </div>
                     <br>
                     <br><br>
                     <div >
-                        <h1>alumno</h1>
+                        <h1>usuarios</h1>
                         <select  name="id_student">
-                            @foreach ($student as $rol)
-                                <option value="{{ $rol->id }}">{{ $rol->id }} - {{ $rol->nombre_estudiante }}
+                            @foreach ($users as $rol)
+                                <option value="{{ $rol->id }}">{{ $rol->id }} - {{ $rol->user_id }}
                                 </option>
                             @endforeach
                         </select>

@@ -17,19 +17,21 @@
 <body >
     
     <div class="box" >
-        <div class="container" >
+        <div class="container " >
             <center>
                 <br>
-                <h1 style="font-size:80px">Modulos</h1>
+                <h1 style="font-size:80px">Lista Usuario-Rol</h1>
+                {{-- <h1 style="font-size:80px">Usuario-rol</h1> --}}
                 
                 <br>
                 <br>
-                <a href="{{ route('student.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar alumno</a>
+                {{-- <a href="{{ route('student.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar alumno</a>
                 <a href="{{ route('teacher.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar profesor</a>
                 
                 <a href="{{ route('student.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver alumnos</a>
-                <a href="{{ route('teacher.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver profesores</a>
-                <a href="{{ route('module.create') }}" class="btn btn-dark " style="backgrand-color:red;">Crear modulo</a>
+                <a href="{{ route('teacher.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver profesores</a> --}}
+                <a href="{{ route('role_user.asociar') }}" class="btn btn-primary " style="backgrand-color:red;">asociar</a>
+                <a href="{{ route('bienvenidos') }}" class="btn btn-primary " style="backgrand-color:red;"><i class="bi bi-house"></i></a> 
                 
                 <br>
                 <br>
@@ -38,39 +40,37 @@
                     <td>
                         <h4>Id
                     </td>
+                    
                     <td>
-                        <h4>Codigo
-                    </td>
-                    <td>
-                        <h4>Nombre modulo
+                        <h4>id_usuario
                     </td>
                     <td>
                         <h4>Id profesor
                     </td>
                     <td>
-                        <h4>Id alumno
+                        <h4>
                     </td>
                     
                     <td></td>
                     <td></td>
-                    @foreach ($modules as $dato)
+                    @foreach ($roleusers as $dato)
                         {{-- function listar --}}
                         <tr>
                             
                             <td class="box-3">{{ $dato->id }}</td>
-                            <td>{{ $dato->codigo }}</td>
-                            <td>{{ $dato->nombre_modulo }}</td>
-                            <td>{{ $dato->id_profesor}}</td>
+                            {{-- <td>{{ $dato->id }}</td> --}}
+                            <td>{{ $dato->role_id }}</td>
+                            <td>{{ $dato->user_id}}</td>
                             {{-- <td>{{$dato->nombre_profesor}}</td> --}}
-                            <td>{{ $dato->id_student }}</td>
-                            <td><a class="btn btn-primary" href="{{ route('module.show', $dato->id) }}" style="text-decoration: none">Mostrar</a></td>
-                            <td><a class="btn btn-primary" href="{{ route('module.edit', $dato->id) }}" style="text-decoration: none">Editar</a></td>
+                            {{-- <td>{{ $dato->id_student }}</td> --}}
+                            {{-- <td><a class="btn btn-primary" href="{{ route('module.show', $dato->id) }}" style="text-decoration: none">Mostrar</a></td> --}}
+                            {{-- <td><a class="btn btn-primary" href="{{ route('module.edit', $dato->id) }}" style="text-decoration: none">Editar</a></td> --}}
                             <td>
-                                <form action="{{ route('module.destroy', $dato->id) }}" method="POST">
+                                {{-- <form action="{{ route('module.destroy', $dato->id) }}" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class="btn btn-primary">Eliminar</button>
-                                </form>
+                                </form> --}}
                             </td>
                         </tr>
                     @endforeach

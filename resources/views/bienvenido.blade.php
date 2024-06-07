@@ -14,14 +14,15 @@
 
 <body>
     <div class="box ">
-        <div class="container-fluid ">
+        <div class="container-fluid  ">
             <center>
                 <h1 style="font-size:80px">Bienvenidos</h1>
-                <table class="table">
-                    <a href="{{ route('module.listar') }}" class="btn btn-primary ">Ver Modulo</a><br><br>
-                    <a href="{{ route('module.listar') }}" class="btn btn-primary ">Ver roles</a><br><br>
-                    <a href="{{ route('package.listar') }}" class="btn btn-primary ">Ver Paquetes</a><br><br>
-                    <a href="{{ route('product.listar') }}" class="btn btn-primary ">Ver productos</a><br>
+                <br>
+                <table class="table ">
+                    <a href="{{ route('module.listar') }}" class="btn btn-primary d-grid gap-2 col-2 mx-auto">Ver Modulo</a><br><br>
+                    <a href="{{ route('role_user.listar') }}" class="btn btn-primary d-grid gap-2 col-2 mx-auto ">Ver roles</a><br><br>
+                    <a href="{{ route('package.listar') }}" class="btn btn-primary d-grid gap-2 col-2 mx-auto">Ver Paquetes</a><br><br>
+                    <a href="{{ route('product.listar') }}" class="btn btn-primary d-grid gap-2 col-2 mx-auto">Ver productos</a><br>
                     <br>
                     {{-- <a href="{{ route('role_user.asociar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver Roles</a> --}}
             </center>
