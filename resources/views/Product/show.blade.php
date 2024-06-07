@@ -14,18 +14,18 @@
 
 <body>
     <div class="box ">
-        <div class="container-fluid ">
+        <div class="px-20 mx-100">
             <center>
-                <h1 style="font-size:80px">Bienvenidos</h1>
+                <h1>show profesor</h1>
                 <table class="table">
-                    <a href="{{ route('module.listar') }}" class="btn btn-primary ">Ver Modulo</a><br><br>
-                    <a href="{{ route('module.listar') }}" class="btn btn-primary ">Ver roles</a><br><br>
-                    <a href="{{ route('package.listar') }}" class="btn btn-primary ">Ver Paquetes</a><br><br>
-                    <a href="{{ route('product.listar') }}" class="btn btn-primary ">Ver productos</a><br>
-                    <br>
-                    {{-- <a href="{{ route('role_user.asociar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver Roles</a> --}}
+                    <tr>
+                        <td>{{ $dato }}</td>
+                    </tr>
+                </table>
             </center>
         </div>
+
+
     </div>
 
 

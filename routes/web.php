@@ -34,13 +34,13 @@ use Illuminate\Support\Facades\Route;
 // use App\Model\User
 // $user = User::find(2)  
 
-
-Route::get('/', function () {           //primera vista de modulos
+ //primera vista de modulos
+Route::get('/', function () {         
     // $modules = Module::orderBy('id', 'desc')->get();
     return view('bienvenido');
-});
+})->name('bienvenidos');
 
-// package.store
+                                 //package-paquete
 Route::get('paquete/listar', [PackageController::class, 'listar'])->name('package.listar');
 Route::get('paquete/create', [PackageController::class, 'create'])->name('package.create');
 Route::post('paquete/store', [PackageController::class, 'store'])->name('package.store');
@@ -48,14 +48,22 @@ Route::get('paquete/{paq}', [PackageController::class, 'show'])->name('package.s
 Route::put('paquete/{paq}', [PackageController::class, 'update'])->name('package.update');
 Route::delete('paquete/{paq}', [PackageController::class, 'destroy'])->name('package.destroy');
 Route::get('paquete/{paq}/edit', [PackageController::class, 'edit'])->name('package.edit');
-
-Route::get('camionero/camion/listar', [TruckerTruckController::class, 'listar'])->name('trucker_truck.listar');;
+                              //producto
+Route::get('producto/listar', [ProductController::class, 'listar'])->name('product.listar');
+Route::get('producto/create', [ProductController::class, 'create'])->name('product.create');
+Route::post('producto/store', [ProductController::class, 'store'])->name('product.store');
+Route::get('producto/{dato}', [ProductController::class, 'show'])->name('product.show');
+Route::put('producto/{dato}', [ProductController::class, 'update'])->name('product.update');
+Route::delete('producto/{dato}', [ProductController::class, 'destroy'])->name('product.destroy');
+Route::get('producto/{dato}/edit', [ProductController::class, 'edit'])->name('product.edit');
+//trucker-camionero
+Route::get('camionero/camion/listar', [TruckerTruckController::class, 'listar'])->name('trucker_truck.listar');
 Route::get('camionero/asociar/camion', [TruckerTruckController::class, 'asociar'])->name('trucker_truck.asociar');
 Route::post('camionero/store', [TruckerTruckController::class, 'store'])->name('trucker_truck.store');
-
+//producto
 Route::get('cliente/asociar/producto', [CustomerproductController::class, 'asociar']);
 Route::post('cliente/store', [CustomerproductController::class, 'store'])->name('customer_product.store');
-
+//role user
 Route::get('usuario/asociar/rol', [RoleUserController::class, 'asociar']);
 Route::post('usuario/asociar/rol/store', [RoleUserController::class, 'store'])->name('role_user.store');
 //modulo

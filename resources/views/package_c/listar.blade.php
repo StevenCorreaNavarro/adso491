@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Title</title>
 </head>
 
@@ -20,6 +21,7 @@
                 <a href="{{ route('package.create') }}" class="btn btn-primary " style="backgrand-color:red;">registrar
                     paquetes
                 </a>
+                <a href="{{ route('bienvenidos') }}" class="btn btn-primary " style="backgrand-color:red;"><i class="bi bi-house"></i></a> 
                 <br>
                 <br>
                 <br>

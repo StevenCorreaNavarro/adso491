@@ -14,12 +14,15 @@
 </head>
 
 <body>
+    
     <div class="box">
         <div class="container">
-            <center>
-                <h1 style="font-size:80px">Lista profesores</h1>
+                 <center>
+                
+                <h1 style="font-size:80px">Lista de productos</h1>
+                
                 <br>
-                <a href="{{ route('teacher.create') }}" class="btn btn-primary " style="backgrand-color:red;">Registrar
+                {{-- <a href="{{ route('teacher.create') }}" class="btn btn-primary " style="backgrand-color:red;">Registrar
                     Profesor</a>
                 <a href="{{ route('student.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar
                     alumno</a>
@@ -27,7 +30,10 @@
                     alumnos</a>
                 <a href="{{ route('teacher.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver
                     Profesores</a>
-                <a href="{{ route('module.listar') }}" class="btn btn-dark " style="backgrand-color:red;">Ver Modulo</a>
+                <a href="{{ route('module.listar') }}" class="btn btn-dark " style="backgrand-color:red;">Ver Modulo</a> --}}
+                <a href="{{ route('product.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar producto</a>
+                <a href="{{ route('bienvenidos') }}" class="btn btn-primary " style="backgrand-color:red;"><i class="bi bi-house"></i></a> 
+       
             </center>
             <br>
             <table class="table">
@@ -35,48 +41,47 @@
                     <h4>Id
                 </td>
                 <td>
-                    <h4>DNI
+                    <h4>codigo
                 </td>
                 <td>
-                    <h4>Nombre
+                    <h4>existencia
                 </td>
                 <td>
-                    <h4>Direccion
+                    <h4>descripcion
                 </td>
                 <td>
-                    <h4>Telefono
+                    <h4>precio
                 </td>
                 <td></td>
                 <td></td>
                 <td></td>
-                @foreach ($teachers as $dato)
+                @foreach ($datos as $dato)
                     {{-- function listar --}}
                     <tr>
                         <td>{{ $dato->id }}</td>
-                        <td>{{ $dato->dni }}</td>
-                        <td>{{ $dato->nombre_profesor }}</td>
-                        <td>{{ $dato->direccion }}</td>
-                        <td>{{ $dato->telefono }} </td>
-                        <td><a class="btn btn-primary" href="{{ route('teacher.show', $dato->id) }}"
+                        <td>{{ $dato->codigo }}</td>
+                        <td>{{ $dato->existencia }}</td>
+                        <td>{{ $dato->descripcion }}</td>
+                        <td>{{ $dato->precio }} </td>
+
+                        <td><a class="btn btn-primary" href="{{ route('product.show', $dato->id) }}"
                                 style="text-decoration: none">Mostrar</a>
                         </td>
-                        <td><a class="btn btn-primary" href="{{ route('teacher.edit', $dato->id) }}"
+                        <td><a class="btn btn-primary" href="{{ route('product.edit', $dato->id) }}"
                                 style="text-decoration: none">Editar</a>
                         </td>
                         <td>
-                            <form action="{{ route('teacher.destroy', $dato->id) }}" method="POST">
+                            <form action="{{ route('product.destroy', $dato->id) }}" method="POST">
                                 @csrf
                                 @method('delete')
-                                {{-- <button type="submit" class="btn btn-primary">Eliminar</button> --}}
-                                <button type="submit" class="btn btn-primary">
-                                    aliminar
-                                </button>
+                                <button type="submit" class="btn btn-primary">Eliminar</button>
                                 
+
                             </form>
 
 
                         </td>
-                       
+
                     </tr>
                 @endforeach
             </table>
