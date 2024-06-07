@@ -25,18 +25,18 @@
                     @csrf
                     <br>
                     <h3>Camionero :</h3>
-                    <select class="container-sm col-6" name="user_id">
+                    <select class="container-sm col-6" name="trucker_id">   {{-- importante --}}  
                         @foreach ($truckers as $cust)
-                            <option  value="{{ $cust->id }}">{{ $cust->id }} - {{ $cust-> nombre }}</option>
+                            <option  value="{{ $cust->id }}">{{ $cust->id }} - {{ $cust->nombre}}</option>
                         @endforeach
                     </select>
                     <br>
                     <br>
                     <br>
                     <h3>camion:</h3>
-                    <select class="container-sm col-6" name="role_id">
+                    <select class="container-sm col-6" name="truck_id">
                         @foreach ($trucks as $prod)
-                            <option  value="{{ $prod->id }}">{{ $prod->id }} - {{ $prod->matricula }}</option>
+                            <option  value="{{ $prod->id }}">{{ $prod->id }} - {{ $prod->tipo }}</option>
                         @endforeach
                     </select>
                     <br> <br>

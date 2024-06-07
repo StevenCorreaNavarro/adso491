@@ -11,20 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('trucker_truck', function (Blueprint $table) {
+        Schema::create('truck_trucker', function (Blueprint $table) {
             $table->id();
 
             //creacion de tablas foraneas
-            $table->unsignedBigInteger('trucker_id')->nullable();
-            $table->unsignedBigInteger('truck_id')->nullable();
 
-            $table->foreign('trucker_id')
-            ->references('id')
-            ->on('truckers')->onDelete('cascade');
+            $table->unsignedBigInteger('truck_id')->nullable();
+            $table->unsignedBigInteger('trucker_id')->nullable();
+
 
             $table->foreign('truck_id')
-            ->references('id')
-            ->on('trucks')->onDelete('cascade');
+                ->references('id')
+                ->on('trucks')->onDelete('cascade');
+
+            $table->foreign('trucker_id')
+                ->references('id')
+                ->on('truckers')->onDelete('cascade');
 
             $table->timestamps();
         });
@@ -35,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('trucker_truck');
+        Schema::dropIfExists('truck_trucker');
     }
 };

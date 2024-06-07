@@ -19,7 +19,7 @@
                 <br>
                 <h1>Actualizar modulo</h1>
                 <br>
-                <form action="{{ route('module.update', $dato) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('module.update', $paq) }}" method="POST" enctype="multipart/form-data">
                     @method('put')
                     @csrf
                     <label class="form-label">

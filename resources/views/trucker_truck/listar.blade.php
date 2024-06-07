@@ -18,16 +18,16 @@
         <div class="container" >
             <center>
                 <br>
-                <h1 style="font-size:80px">Modulos</h1>
+                <h1 style="font-size:80px">Lista camioneros camion</h1>
                 
                 <br>
                 <br>
-                <a href="{{ route('student.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar alumno</a>
+                {{-- <a href="{{ route('student.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar alumno</a>
                 <a href="{{ route('teacher.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar profesor</a>
                 
                 <a href="{{ route('student.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver alumnos</a>
-                <a href="{{ route('teacher.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver profesores</a>
-                <a href="{{ route('module.create') }}" class="btn btn-dark " style="backgrand-color:red;">Crear modulo</a>
+                <a href="{{ route('teacher.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver profesores</a> --}}
+                <a href="{{ route('trucker_truck.asociar') }}" class="btn btn-dark " style="backgrand-color:red;">asociar</a>
                 
                 <br>
                 <br>
@@ -37,38 +37,38 @@
                         <h4>Id
                     </td>
                     <td>
-                        <h4>Codigo
+                        <h4>Camionero
                     </td>
                     <td>
-                        <h4>Nombre modulo
+                        <h4>CAmion
                     </td>
                     <td>
-                        <h4>Id profesor
+                        <h4>
                     </td>
                     <td>
-                        <h4>Id alumno
+                        <h4>
                     </td>
                     
                     <td></td>
                     <td></td>
-                    @foreach ($modules as $dato)
+                    @foreach ($truckers as $dat)
                         {{-- function listar --}}
                         <tr>
                             
-                            <td class="box-3">{{ $dato->id }}</td>
-                            <td>{{ $dato->codigo }}</td>
-                            <td>{{ $dato->nombre_modulo }}</td>
-                            <td>{{ $dato->id_profesor}}</td>
+                            <td class="box-3">{{ $dat->id }}</td>
+                            {{-- <td>{{ $dato->codigo }}</td> --}}
+                            {{-- <td>{{ $dato-> }}</td> --}}
+                            <td>{{ $dat->trucker_id}}</td>
                             {{-- <td>{{$dato->nombre_profesor}}</td> --}}
-                            <td>{{ $dato->id_student }}</td>
-                            <td><a class="btn btn-primary" href="{{ route('module.show', $dato->id) }}" style="text-decoration: none">Mostrar</a></td>
-                            <td><a class="btn btn-primary" href="{{ route('module.edit', $dato->id) }}" style="text-decoration: none">Editar</a></td>
+                            <td>{{ $dat->truck_id }}</td>
+                            {{-- <td><a class="btn btn-primary" href="{{ route('module.show', $dato->id) }}" style="text-decoration: none">Mostrar</a></td>
+                            <td><a class="btn btn-primary" href="{{ route('module.edit', $dato->id) }}" style="text-decoration: none">Editar</a></td> --}}
                             <td>
-                                <form action="{{ route('module.destroy', $dato->id) }}" method="POST">
+                                {{-- <form action="{{ route('module.destroy', $dato->id) }}" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class="btn btn-primary">Eliminar</button>
-                                </form>
+                                </form> --}}
                             </td>
                         </tr>
                     @endforeach

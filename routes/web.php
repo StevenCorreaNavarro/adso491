@@ -40,7 +40,17 @@ Route::get('/', function () {           //primera vista de modulos
     return view('bienvenido');
 });
 
-Route::get('camionero/asociar/camion', [TruckerTruckController::class, 'asociar']);
+// package.store
+Route::get('paquete/listar', [PackageController::class, 'listar'])->name('package.listar');
+Route::get('paquete/create', [PackageController::class, 'create'])->name('package.create');
+Route::post('paquete/store', [PackageController::class, 'store'])->name('package.store');
+Route::get('paquete/{paq}', [PackageController::class, 'show'])->name('package.show');
+Route::put('paquete/{paq}', [PackageController::class, 'update'])->name('package.update');
+Route::delete('paquete/{paq}', [PackageController::class, 'destroy'])->name('package.destroy');
+Route::get('paquete/{paq}/edit', [PackageController::class, 'edit'])->name('package.edit');
+
+Route::get('camionero/camion/listar', [TruckerTruckController::class, 'listar'])->name('trucker_truck.listar');;
+Route::get('camionero/asociar/camion', [TruckerTruckController::class, 'asociar'])->name('trucker_truck.asociar');
 Route::post('camionero/store', [TruckerTruckController::class, 'store'])->name('trucker_truck.store');
 
 Route::get('cliente/asociar/producto', [CustomerproductController::class, 'asociar']);
@@ -101,3 +111,11 @@ Route::get('curso/{curso}/editar', [CursoController::class, 'edit'])->name('curs
 
 // route::get('login',[Logincontroller::class,'iniciar']);
 // route::post('login/store',[LoginController::class,'store'])->name ('login.store');
+
+
+
+                    //   para limpar cache
+// php artisan config:cache
+// php artisan route:cache
+// php artisan config:clear
+// php artisan route:clear

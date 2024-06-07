@@ -18,10 +18,8 @@ class RoleUserController extends Controller
 
     public function store(Request $request)
     {
-
-        // $user = User::find($request->user_id);
-
-        // $user->roles()->attach($request->role_id);
-        return 'hola desde asociar';
+        $user = User::find($request->user_id);
+        $user->roles()->attach($request->role_id);
+        // return 'hola desde asociar';
     }
 }

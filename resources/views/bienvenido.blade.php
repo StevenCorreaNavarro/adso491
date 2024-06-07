@@ -13,16 +13,20 @@
 </head>
 
 <body>
-    <div class="box-2 ">
-        <div class="px-20 mx-100">
+    <div class="box ">
+        <div class="container-fluid ">
             <center>
                 <h1 style="font-size:80px">Bienvenidos</h1>
                 <table class="table">
-                    <a href="{{ route('module.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver Modulo</a>
+                    <a href="{{ route('module.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver
+                        Modulo</a>
+                    <br>
+                    <br>
+                    <a href="{{ route('package.listar') }}" class="btn btn-primary "
+                        style="backgrand-color:red;">Ver Camioneros</a>
                     <br>
                     <br>
                     {{-- <a href="{{ route('role_user.asociar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver Roles</a> --}}
-                    
             </center>
         </div>
     </div>
