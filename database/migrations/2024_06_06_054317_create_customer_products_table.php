@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('customerproducts', function (Blueprint $table) {
+        Schema::create('customer_products', function (Blueprint $table) {
             $table->id();
 
             //creacion de tablas foraneas
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('customerproducts');
+        Schema::dropIfExists('customer_products');
     }
 };
