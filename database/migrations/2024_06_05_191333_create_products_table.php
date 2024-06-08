@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('codigo');
             $table->string('existencia');
             $table->string('descripcion');
-            $table->string('precio');
+            $table->integer('precio');
             $table->timestamps();
         });
     }

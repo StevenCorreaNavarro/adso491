@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Customer extends Model
 {
     use HasFactory;
-    //Relacion muchos a muchos
+
+    //Relacion muchos a muchos    
     public function products()
     {
         return $this->belongsToMany('App\Models\Product');

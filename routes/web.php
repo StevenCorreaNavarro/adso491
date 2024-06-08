@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;  //// reconocedor de controladores
-use App\Models\Calculadora;
-use App\Models\Product;
-use App\Models\Curso;
-use App\Models\Module;
-use App\Models\Teacher;
-use App\Models\Registro;
-use App\Models\Store;              //crear esta parte 
-use App\Models\Student;
+// use App\Models\Calculadora;
+// use App\Models\Product;
+// use App\Models\Curso;
+// use App\Models\Module;
+// use App\Models\Teacher;
+// use App\Models\Registro;
+// use App\Models\Store;              //crear esta parte 
+// use App\Models\Student;
 use Illuminate\Support\Facades\Route;
 
 /*
