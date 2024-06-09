@@ -17,6 +17,13 @@ return new class extends Migration
             $table->string('existencia');
             $table->string('descripcion');
             $table->integer('precio');
+
+            //creacion de tablas foraneas
+            $table->unsignedBigInteger('suppliers_id')->nullable();
+            $table->foreign('suppliers_id')
+            ->references('id')
+            ->on('suppliers')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

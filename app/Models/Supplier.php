@@ -8,8 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Supplier extends Model
 {
     use HasFactory;
-
-   
     // M\user Relacion Uno a Muchos
     public function Products()
     {

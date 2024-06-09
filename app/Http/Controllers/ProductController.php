@@ -19,7 +19,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $dato = new Product();
-
+// 
         $dato->codigo = $request->codigo;
         $dato->existencia = $request->existencia;
         $dato->descripcion = $request->descripcion;

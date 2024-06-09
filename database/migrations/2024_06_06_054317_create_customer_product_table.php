@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('customer_products', function (Blueprint $table) {
+        Schema::create('customer_product', function (Blueprint $table) {
             $table->id();
 
             //creacion de tablas foraneas
@@ -19,12 +19,13 @@ return new class extends Migration
             $table->unsignedBigInteger('product_id')->nullable();
 
             $table->foreign('customer_id')
-            ->references('id')
-            ->on('customers')->onDelete('cascade');
+                ->references('id')
+                ->on('customers')->onDelete('cascade');
 
             $table->foreign('product_id')
-            ->references('id')
-            ->on('products')->onDelete('cascade');
+                ->references('id')
+                ->on('products')->onDelete('cascade');;
+
 
             $table->timestamps();
         });
@@ -35,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('customer_products');
+        Schema::dropIfExists('customer_product');
     }
 };
