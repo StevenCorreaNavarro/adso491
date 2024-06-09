@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;  //// reconocedor de controladores
+namespace App\Http\Controllers;       //// reconocedor de controladores
 // use App\Models\Calculadora;
 // use App\Models\Product;
 // use App\Models\Curso;

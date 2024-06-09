@@ -18,6 +18,7 @@ class CustomerproductController extends Controller
     {
         $customer = Customer::find($request->customer_id);
         $customer->products()->attach($request->product_id);
-        // return 'hola desde asociar';
+
+        
     }
 }

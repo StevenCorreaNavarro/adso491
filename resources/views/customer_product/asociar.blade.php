@@ -21,7 +21,7 @@
                 <h1>Cliente-Producto:</h1>
                 <br>
                 <br>
-                <form action="{{ route('role_user.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('customer_product.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <br>
                     <h3>Cliente:</h3>

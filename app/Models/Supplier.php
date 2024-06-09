@@ -11,6 +11,7 @@ class Supplier extends Model
     // M\user Relacion Uno a Muchos
     public function Products()
     {
-        return $this->hasMany('App\Models\Product'); //RECUPERAR LA COLECCION DE POST QUE PERTENECEN A ESTE USUARIO
+        return $this->hasMany('App\Models\Product'); 
+        //RECUPERAR LA COLECCION DE POST QUE PERTENECEN A ESTE USUARIO
     }
 }
