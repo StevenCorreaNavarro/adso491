@@ -15,11 +15,9 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
-|
 */
 // git remote add origin https://github.com/StevenCorreaNavarro/example-app.git
 
@@ -34,13 +32,13 @@ use Illuminate\Support\Facades\Route;
 // use App\Model\User
 // $user = User::find(2)  
 
- //primera vista de modulos
-Route::get('/', function () {         
+//primera vista de modulos
+Route::get('/', function () {
     // $modules = Module::orderBy('id', 'desc')->get();
     return view('bienvenido');
 })->name('bienvenidos');  //ruta home
 
-                                 //package-paquete
+//package-paquete
 Route::get('paquete/listar', [PackageController::class, 'listar'])->name('package.listar');
 Route::get('paquete/create', [PackageController::class, 'create'])->name('package.create');
 Route::post('paquete/store', [PackageController::class, 'store'])->name('package.store');
@@ -48,7 +46,7 @@ Route::get('paquete/{paq}', [PackageController::class, 'show'])->name('package.s
 Route::put('paquete/{paq}', [PackageController::class, 'update'])->name('package.update');
 Route::delete('paquete/{paq}', [PackageController::class, 'destroy'])->name('package.destroy');
 Route::get('paquete/{paq}/edit', [PackageController::class, 'edit'])->name('package.edit');
-                              //producto
+//producto
 Route::get('producto/listar', [ProductController::class, 'listar'])->name('product.listar');
 Route::get('producto/create', [ProductController::class, 'create'])->name('product.create');
 Route::post('producto/store', [ProductController::class, 'store'])->name('product.store');
@@ -57,20 +55,17 @@ Route::put('producto/{dato}', [ProductController::class, 'update'])->name('produ
 Route::delete('producto/{dato}', [ProductController::class, 'destroy'])->name('product.destroy');
 Route::get('producto/{dato}/edit', [ProductController::class, 'edit'])->name('product.edit');
 //trucker-camionero
-Route::get('camionero/camion/listar', [TruckerTruckController::class, 'listar'])->name('trucker_truck.listar');
-Route::get('camionero/asociar/camion', [TruckerTruckController::class, 'asociar'])->name('trucker_truck.asociar');
-Route::post('camionero/store', [TruckerTruckController::class, 'store'])->name('trucker_truck.store');
+Route::get('camionerocamion/listar', [TruckerTruckController::class, 'listar'])->name('trucker_truck.listar');
+Route::get('camionerocamion/asociar', [TruckerTruckController::class, 'asociar'])->name('trucker_truck.asociar');
+Route::post('camionerocamion/store', [TruckerTruckController::class, 'store'])->name('trucker_truck.store');
 //producto
-
 Route::get('cliente/asociar/producto', [CustomerproductController::class, 'asociar']);
 Route::post('cliente/store', [CustomerproductController::class, 'store'])->name('customer_product.store');
-
 //role user   completo
 Route::get('usuario/listar/rol', [RoleUserController::class, 'listar'])->name('role_user.listar');
 Route::get('usuario/asociar/rol', [RoleUserController::class, 'asociar'])->name('role_user.asociar');
 Route::get('usuario/create/rol', [RoleUserController::class, 'create'])->name('role_user.create');
 Route::post('usuario/asociar/rol/store', [RoleUserController::class, 'store'])->name('role_user.store');
-
 //modulo
 Route::get('module/listar', [ModuleController::class, 'listar'])->name('module.listar');
 Route::get('module/asociar', [ModuleController::class, 'asociar'])->name('module.asociar');
@@ -128,6 +123,8 @@ Route::get('curso/{curso}/editar', [CursoController::class, 'edit'])->name('curs
 
 
                     //   para limpar cache
+
+
 // php artisan config:cache
 // php artisan route:cache
 // php artisan config:clear

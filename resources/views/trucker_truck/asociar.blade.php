@@ -24,12 +24,7 @@
                 <form action="{{ route('trucker_truck.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <br>
-                    <h3>Camionero :</h3>
-                    <select class="container-sm col-6" name="trucker_id">   {{-- importante --}}  
-                        @foreach ($truckers as $cust)
-                            <option  value="{{ $cust->id }}">{{ $cust->id }} - {{ $cust->nombre}}</option>
-                        @endforeach
-                    </select>
+                    
                     <br>
                     <br>
                     <br>
@@ -40,6 +35,12 @@
                         @endforeach
                     </select>
                     <br> <br>
+                    <h3>Camionero :</h3>
+                    <select class="container-sm col-6" name="trucker_id">   {{-- importante --}}  
+                        @foreach ($truckers as $cust)
+                            <option  value="{{ $cust->id }}">{{ $cust->id }} - {{ $cust->nombre}}</option>
+                        @endforeach
+                    </select>
                     <button class="btn btn-primary" type="submit">Enviar Formulario:</button>
                 </form>
                 <br>

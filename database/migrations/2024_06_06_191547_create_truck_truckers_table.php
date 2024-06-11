@@ -6,19 +6,14 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('truck_trucker', function (Blueprint $table) {
+        Schema::create('trucker_trucks', function (Blueprint $table) {
             $table->id();
 
             //creacion de tablas foraneas
-
             $table->unsignedBigInteger('truck_id')->nullable();
             $table->unsignedBigInteger('trucker_id')->nullable();
-
 
             $table->foreign('truck_id')
                 ->references('id')
@@ -32,11 +27,8 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('truck_trucker');
+        Schema::dropIfExists('trucker_trucks');
     }
 };

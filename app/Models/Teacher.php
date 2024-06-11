@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Teacher extends Model
 {
-    
-
     // uno a uno de teacher a modulo
     public function module()
     {

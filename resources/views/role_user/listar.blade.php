@@ -31,7 +31,7 @@
                 <a href="{{ route('student.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver alumnos</a>
                 <a href="{{ route('teacher.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver profesores</a> --}}
                 <a href="{{ route('role_user.asociar') }}" class="btn btn-primary " style="backgrand-color:red;">asociar</a>
-                <a href="{{ route('bienvenidos') }}" class="btn btn-primary " style="backgrand-color:red;"><i class="bi bi-house"></i></a> 
+                <a href="{{ route('bienvenidos') }}" class="btn btn-secondary" style="backgrand-color:red;"><i class="bi bi-house"></i></a> 
                 
                 <br>
                 <br>

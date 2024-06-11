@@ -28,8 +28,8 @@
                 
                 <a href="{{ route('student.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver alumnos</a>
                 <a href="{{ route('teacher.listar') }}" class="btn btn-primary " style="backgrand-color:red;">Ver profesores</a>
-                <a href="{{ route('module.create') }}" class="btn btn-dark " style="backgrand-color:red;">Crear modulo</a>
-                <a href="{{ route('bienvenidos') }}" class="btn btn-primary " style="backgrand-color:red;"><i class="bi bi-house"></i></a> 
+                <a href="{{ route('module.create') }}" class="btn btn-success" style="backgrand-color:red;">Crear modulo</a>
+                <a href="{{ route('bienvenidos') }}" class="btn btn-secondary " style="backgrand-color:red;"><i class="bi bi-house"></i></a> 
        
                 
                 <br>

@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Models\Package;
 use Illuminate\Http\Request;
 
@@ -14,13 +12,11 @@ class PackageController extends Controller
     }
     public function create()
     { // crear formulario
-
         return view('package_c.create');
     }
     public function store(Request $request)
     {
         $paq = new Package();
-
         $paq->codigo = $request->codigo;
         $paq->descripcion = $request->descripcion;
         $paq->destinatario = $request->destinatario;

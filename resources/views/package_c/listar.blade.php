@@ -21,7 +21,7 @@
                 <a href="{{ route('package.create') }}" class="btn btn-primary " style="backgrand-color:red;">registrar
                     paquetes
                 </a>
-                <a href="{{ route('bienvenidos') }}" class="btn btn-primary " style="backgrand-color:red;"><i class="bi bi-house"></i></a> 
+                <a href="{{ route('bienvenidos') }}" class="btn btn-secondary " style="backgrand-color:red;"><i class="bi bi-house"></i></a> 
                 <br>
                 <br>
                 <br>

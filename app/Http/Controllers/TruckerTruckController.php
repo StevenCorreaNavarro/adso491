@@ -29,9 +29,9 @@ class TruckerTruckController extends Controller
     {
         $trucker = Trucker::find($request->trucker_id);
         $trucker->trucks()->attach($request->truck_id);
-    //     $trucker->save();
-    //     // return $curso;
+        $trucker->save();
+        // return $truckers;
     //     // return 'hola desde asociar camionero';
-        // return redirect()->route('trucker_truck.listar');
+        return redirect()->route('trucker_truck.listar');
     }
 }

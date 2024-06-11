@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Module extends Model
 {
-    
-
     //Relacion Uno a Muchos (Inversa) 
     public function teacher()
     {
@@ -20,5 +18,4 @@ class Module extends Model
     {
         return $this->belongsTo('App\Models\Student');
     }
-
 }
