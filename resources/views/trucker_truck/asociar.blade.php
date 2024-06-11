@@ -28,20 +28,22 @@
                     <br>
                     <br>
                     <br>
+                    <h3>Camionero :</h3>
+                    <select class="container-sm col-6" name="trucker_id">   {{-- importante --}}  
+                        @foreach ($trucker as $cust)
+                            <option  value="{{ $cust->id }}">{{ $cust->id }} - {{ $cust->nombre}}</option>
+                        @endforeach
+                    </select>
+                    
                     <h3>camion:</h3>
                     <select class="container-sm col-6" name="truck_id">
-                        @foreach ($trucks as $prod)
+                        @foreach ($truck as $prod)
                             <option  value="{{ $prod->id }}">{{ $prod->id }} - {{ $prod->tipo }}</option>
                         @endforeach
                     </select>
                     <br> <br>
-                    <h3>Camionero :</h3>
-                    <select class="container-sm col-6" name="trucker_id">   {{-- importante --}}  
-                        @foreach ($truckers as $cust)
-                            <option  value="{{ $cust->id }}">{{ $cust->id }} - {{ $cust->nombre}}</option>
-                        @endforeach
-                    </select>
                     <button class="btn btn-primary" type="submit">Enviar Formulario:</button>
+                    
                 </form>
                 <br>
                 <br>

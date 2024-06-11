@@ -18,9 +18,9 @@ class RoleUserController extends Controller
     }
     public function asociar()
     {
-        $users = User::all();
-        $roles = Role::all();
-        return view('role_user.asociar', compact('users', 'roles'));
+        $user = User::all();
+        $role = Role::all();
+        return view('role_user.asociar', compact('user', 'role'));
     }
     // public function asociar()
     // { // crear formulario

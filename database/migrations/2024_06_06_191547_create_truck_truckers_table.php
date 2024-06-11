@@ -7,10 +7,11 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     public function up(): void
+    //cambiando el orden trucker truk
     {
-        Schema::create('trucker_trucks', function (Blueprint $table) {
-            $table->id();
+        Schema::create('truck_trucker', function (Blueprint $table) {
 
+            $table->id();
             //creacion de tablas foraneas
             $table->unsignedBigInteger('truck_id')->nullable();
             $table->unsignedBigInteger('trucker_id')->nullable();
@@ -29,6 +30,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('trucker_trucks');
+        Schema::dropIfExists('truck_trucker');
     }
 };

@@ -25,7 +25,7 @@
                     <br>
                     <h3>Usuarios:</h3>
                     <select class="container-sm col-6" name="user_id">
-                        @foreach ($users as $user)
+                        @foreach ($user as $user)
                             <option  value="{{ $user->id }}">{{ $user->id }} - {{ $user->name }}</option>
                         @endforeach
                     </select>
@@ -34,7 +34,7 @@
                     <br>
                     <h3>Roles:</h3>
                     <select class="container-sm col-6" name="role_id">
-                        @foreach ($roles as $rol)
+                        @foreach ($role as $rol)
                             <option  value="{{ $rol->id }}">{{ $rol->id }} - {{ $rol->name }}</option>
                         @endforeach
                     </select>
