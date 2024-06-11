@@ -32,7 +32,7 @@
                     Profesores</a>
                 <a href="{{ route('module.listar') }}" class="btn btn-dark " style="backgrand-color:red;">Ver Modulo</a> --}}
                 <a href="{{ route('product.create') }}" class="btn btn-primary " style="backgrand-color:red;">Ingresar producto</a>
-                <a href="{{ route('trucker_truck.listar') }}" class="btn btn-primary " style="backgrand-color:red;">lista camionero-camion</a>
+                
                 <a href="{{ route('bienvenidos') }}" class="btn btn-secondary " style="backgrand-color:red;"><i class="bi bi-house"></i></a> 
                 
             </center>
