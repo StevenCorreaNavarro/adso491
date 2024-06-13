@@ -35,23 +35,21 @@ class ProductController extends Controller
         return view('Product.show', compact('dato'));
     }
 
-    public function destroy(Product $paq)
+    public function destroy(Product $dato)
     {
-        $paq->delete();
+        $dato->delete();
         return redirect()->route('product.listar');
     }
 
     //Edit
     public function edit(Product $dato)
     { //Encuentro el Curso
-
         return view('product.edit', compact('dato'));
     }
 
     //Update
     public function update(Request $request,Product $dato)
     {
-
         $dato->codigo = $request->codigo;
         $dato->existencia = $request->existencia;
         $dato->descripcion = $request->descripcion;
