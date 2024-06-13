@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>Actualizar curso</h1>
+    <h1>Actualizar paquete</h1>
 
     <form action="{{ route('package.update', $paq) }}" method="POST" enctype="multipart/form-data">
 
