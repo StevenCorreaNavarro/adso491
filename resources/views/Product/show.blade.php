@@ -16,7 +16,7 @@
     <div class="box ">
         <div class="px-20 mx-100">
             <center>
-                <h1>show profesor</h1>
+                <h1>show producto</h1>
                 <table class="table">
                     <tr>
                         <td>{{ $dato }}</td>
