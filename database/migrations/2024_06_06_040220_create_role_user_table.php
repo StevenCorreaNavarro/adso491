@@ -19,12 +19,12 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
 
             $table->foreign('role_id')
-            ->references('id')
-            ->on('roles')->onDelete('cascade');
+                ->references('id')
+                ->on('roles')->onDelete('cascade');
 
             $table->foreign('user_id')
-            ->references('id')
-            ->on('users')->onDelete('cascade');
+                ->references('id')
+                ->on('users')->onDelete('cascade');
 
             $table->timestamps();
         });
